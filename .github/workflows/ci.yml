@@ -31,7 +31,7 @@ jobs:
       - name: Run unit tests
         run: dotnet test --no-build
       
-            - name: Scan NuGet dependencies
+      - name: Scan NuGet dependencies
         shell: bash
         run: |
           dotnet package list --vulnerable --include-transitive --no-restore --format json --output-version 1 > vulnerability-report.json
